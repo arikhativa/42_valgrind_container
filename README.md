@@ -17,7 +17,11 @@ $ docker build -t $(whoami)/valgrind .
 # We need to go to the directory of the project we want inside the container
 $ cd PATH_TO_PROJECT
 # This command runs the container, with the content of the current folder in the /valgrind PATH inside the container
-$ docker run -d -it -v `pwd`:/valgrind/ --name $USER-valgrind $(whoami)/valgrind
+
+
+docker run -d -it -v `pwd`:/valgrind/ --name $USER-valgrind $(whoami)/valgrind
+
+
 # Then, on another terminal/ window, you can run this command, which will connect a shell inside the container :
 $ docker exec -it $USER-valgrind bash
 
