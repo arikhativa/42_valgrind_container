@@ -1,4 +1,5 @@
-FROM ubuntu:18
+FROM ubuntu:18.04
+
 LABEL description="Valgrind"
 ENV TZ=Europe/Kiev
 RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
@@ -12,5 +13,6 @@ RUN git clone https://github.com/42School/norminette.git
 RUN apt-get -y install python3-pip
 RUN python3 -m pip install --upgrade pip setuptools
 RUN python3 -m pip install norminette
+RUN mv norminette /home
 
 WORKDIR /valgrind
