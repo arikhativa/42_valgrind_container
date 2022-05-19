@@ -9,6 +9,9 @@ git clone <repo>
 cd <repo>
 make run
 make enter
+
+also:
+make stop # (to stop the container)
 ```
 
 after these cmds you will be inside the container.

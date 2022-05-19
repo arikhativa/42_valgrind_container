@@ -1,23 +1,22 @@
 
-IMG=arikhativa/pool-tester:0.0.1
+IMG=arikhativa/pool-tester:1.0.0
 NAME=pool-tester
-CLOUD_IMG=arikhativa/pool-tester:0.0.1
+CLOUD_IMG=arikhativa/pool-tester:1.0.0
+WORKDIR=/home
 
-build:
-	docker build -t $(IMG) .
-
-push:
-	docker push $(IMG)
+PROJECT?=-a
+PROJECT_PATH?=/home
 
 run:
-	docker run -d -it -v ~/:/valgrind/ --name $(NAME) $(IMG)
-
-run_local:
-	docker run -d -it -v ~/:/valgrind/ --name $(NAME) $(IMG)
+	docker run -d -it -v $(HOME):$(WORKDIR)/ --name $(NAME) $(IMG)
 
 stop:
 	docker rm -f $(NAME)
 
+re: stop run
+	@true
+
 enter:
 	docker exec -it $(NAME) bash
+
 
