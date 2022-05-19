@@ -1,5 +1,5 @@
 # pool-tester-container
-This project helps you run a docker container with the dependencies of the 42 madrid pool-tester <br \>
+This project helps you run a docker container with the dependencies of the 42 madrid pool-tester
 
 The container will have valgrind inside, so you can use just that if you want
 
