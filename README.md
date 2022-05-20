@@ -4,6 +4,8 @@ This project helps you run a docker container with the dependencies of the 42 ma
 The container will have valgrind inside, so you can use just that if you want
 
 ## How to use
+* look for the blue application called Docker in your Mac and click on it.
+* after it started go to the terminal:
 ```bash
 git clone <repo>
 cd <repo>
