@@ -22,3 +22,10 @@ valgrind ./a.out
 ```
 NOTE - sometims you will need to compile inside the container since the container is not MAC os.
 good luck!
+
+## some valgrind flags:
+```
+valgrind --track-fds=yes --leak-check=full --show-leak-kinds=all --track-origins=yes
+
+--track-fds=yes -> makes sure all your fd are closed
+```
